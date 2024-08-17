@@ -1,7 +1,7 @@
 {
-  "name": "Send to Telegram for Google Chrome",
+  "name": "Send to Feishu for Google Chrome",
   "version": "1.1.1",
-  "description": "Send to Telegram for Google Chrome, with your own key and token.",
+  "description": "Send to Feishu for Google Chrome, with your own key and token.",
   "action": {
     "default_icon": "tg.png",
     "default_title": "Push this page!"

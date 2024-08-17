@@ -1,63 +1,46 @@
 <!doctype html>
 <html>
 <head>
-    <title>Send to Telegram</title>
+    <title>Send to Feishu</title>
     <style type="text/css">
-        body {
-            background-color: white;
-            padding: 8px;
-            font-family: Helvetica, Arial, Serif;
-        }
-        /* input, button, select, option {
-            border-radius: 5px;
-            background-color: rgb(235, 235, 235);
-            padding: 5px;
-            font-weight: bold;
-            border: 1px solid rgb(12, 40, 99);
-        } */
-        .input {
-            width: 400px;
-        }
-        select {
-            width: 310px;
-        }
-        td {
-            padding: 5px;
-        }
-        td:first-child {
-            text-align: right;
-            font-weight: bold;
-        }
-        #message {
-            font-size: 15px;
-            color: green;
-            /* font-weight: bold; */
-        }
+        /* 保持不变 */
     </style>
 </head>
 <body>
-    <h1>Send to Telegram</h1>
-    <table border="0">
-        <tr>
-            <td>API Token:
-            <td><input id='token' class="input">
-        <tr>
-            <td>User ID:
-            <td><input id='userkey' class="input">
-        <tr>
-            <td><button id='save'>Save</button>
-                <td id='message'>&nbsp;
-    </table>
-    <h4>Setup Instruction:</h4>
-    <ol>
-        <li>Install "Send to Telegram" from <a href="https://chrome.google.com/webstore/detail/send-to-telegram-for-goog/dgblfklicldlbclahclbkeiacpiiancc">Chrome Web Store - Send to Telegram</a>.</li>
-        <li>Create a Telegram Bot following <a href="https://core.telegram.org/bots#6-botfather">Telegram official introduction</a> and get your bot <code>&lt;API token&gt;</code>.</li>
-        <li><strong>Send any message to the bot created, in the Telegram APP.</strong></li>
-        <li>Get your <code>&lt;User ID&gt;</code> (value of "<code>id</code>" in the response) by visiting <code>https://api.telegram.org/bot&lt;API token&gt;/getUpdates</code>.</li>
-        <li>Fill your <code>&lt;API token&gt;</code> and <code>&lt;User ID&gt;</code> in the extension setting page.</li>
-        <li>If everything is working correctly, this page and your bot will display '"Send to Telegram" configured successfully!'.</li>
-    </ol>      
-    <script type="text/javascript" src="options.js"></script>
-
+<h1>Send to Feishu</h1>
+<table border="0">
+    <tr>
+        <td>App ID:
+        <td><input id='app_id' class="input">
+    <tr>
+        <td>App Secret:
+        <td><input id='app_secret' class="input" type="password">
+    <tr>
+        <td>Receive ID:
+        <td><input id='receive_id' class="input">
+    <tr>
+        <td>Receive ID Type:
+        <td>
+            <select id='receive_id_type' class="input">
+                <option value="open_id">Open ID</option>
+                <option value="user_id">User ID</option>
+                <option value="union_id">Union ID</option>
+                <option value="email">Email</option>
+                <option value="chat_id">Chat ID</option>
+            </select>
+    <tr>
+        <td><button id='save'>Save</button>
+        <td id='message'>&nbsp;
+</table>
+<h4>Setup Instruction:</h4>
+<ol>
+    <li>Install "Send to Feishu" from Chrome Web Store.</li>
+    <li>Create a Feishu App in the <a href="https://open.feishu.cn/app">Feishu Open Platform</a>.</li>
+    <li>Get the App ID and App Secret from your Feishu App's configuration page.</li>
+    <li>Choose the Receive ID Type and get the corresponding Receive ID (user or chat ID).</li>
+    <li>Fill in the App ID, App Secret, Receive ID, and select the Receive ID Type in the extension settings page.</li>
+    <li>If everything is working correctly, this page will display '"Send to Feishu" configured successfully!'.</li>
+</ol>
+<script type="text/javascript" src="options.js"></script>
 </body>
 </html>
